@@ -1,12 +1,14 @@
 ﻿using Home_Simulation_3.Areas.Admin.ViewModels.Position;
 using Home_Simulation_3.DAL;
 using Home_Simulation_3.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Home_Simulation_3.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class PositionController : Controller
     {
         private readonly AppDbContext _context;

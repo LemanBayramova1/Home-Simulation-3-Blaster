@@ -2,12 +2,14 @@
 using Home_Simulation_3.DAL;
 using Home_Simulation_3.Models;
 using Home_Simulation_3.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Home_Simulation_3.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class EmployeeController : Controller
     {
         private readonly AppDbContext _context;
