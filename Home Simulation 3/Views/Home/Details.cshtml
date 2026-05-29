@@ -1,0 +1,22 @@
+﻿@model Employee
+<div>
+	<div>
+		<h1>Details</h1>
+		<p>This is the details page.</p>
+		<div>
+			<img height="200px" width="200px" src="~/uploads/places/@Model.ImageUrl" />
+		</div>
+		<div>
+			<h2>@Model.Name</h2>
+		</div>
+		<div>
+			<P>@Model.FullAdress</P>
+		</div>
+		<div>
+			<h2>@Model.Position.Name</h2>
+		</div>
+		<div>
+			<P>@Model.PositionId</P>
+		</div>
+	</div>
+</div>

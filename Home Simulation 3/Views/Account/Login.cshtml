@@ -1,0 +1,20 @@
+﻿@model LoginVm
+<div class="container" style="padding-top: 200px">
+    <form asp-controller="Account" asp-action="Login" method="post">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <input asp-for="Email" type="email" class="form-control" id="Email" placeholder="Add Email...">
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">password</label>
+            <input asp-for="Password" type="password" class="form-control" id="password" placeholder="Add password...">
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div>
+        <p>Don`t you have an account? <a asp-controller="Account" asp-action="Register">Register</a></p>
+    </div>
+</div>
